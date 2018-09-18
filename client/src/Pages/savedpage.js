@@ -23,9 +23,7 @@ class SavedPage extends Component {
         console.log(this.state.articles)
       })
   }
-
-  lo
-
+  
   componentDidMount(){
     this.loadSavedArticles();
   }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import Article from '../components/Article/Article'
+import Modal from '../components/Modal/Modal'
 
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 
@@ -42,7 +43,7 @@ class Homepage extends Component {
         <Header 
           title = {this.state.title}
         />
-        {this.state.articles.map(article => (
+        {/* {this.state.articles.map(article => (
           <Article
             key = { article._id}
             id = {article._id}
@@ -52,7 +53,13 @@ class Homepage extends Component {
             comments = {article.comment.length}
             urlLink = {'/articles/' + article._id}
           />
-        ))}
+        ))} */}
+
+        <Modal
+
+        />
+
+
       </div>
       // <div className = "mb-custom">
       //   <Header

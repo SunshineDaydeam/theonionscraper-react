@@ -29,6 +29,10 @@ class SavedPage extends Component {
       })
   }
 
+  postArticle = () => {
+    axios.post('/api/addComment', {body: 'banana', username: 'Johnny', })
+  }
+
   componentDidMount(){
 
     this.loadArticle();
@@ -42,7 +46,6 @@ class SavedPage extends Component {
         <Header 
           title = {this.state.title}
         />
-
           <ArticleComments
             key = { this.state.article._id}
             id = {this.state.article._id}
@@ -51,8 +54,6 @@ class SavedPage extends Component {
             link = {this.state.article.link}
             comment = {this.state.article.comment}
           />
-    
-          <p>{}</p>
           {this.state.comments.map(comment=>(
             <CommentList
               id={comment._id}
